@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <img src="coffee-and-calculator.jpg" />
+    <h1>Bryggkalkylator</h1>
+    Propotioner Vatten
+    <input id="propotioner" type="number" value="68" min="0" max="199"/>
+    <input id="vatten" type="number" value="250" min="0" max="10000" step="50"/>
+    <br/>
+    <input type="button" onclick="processData('propotioner','vatten')" value="Kalkylera" />
+    <script>
+        function processData(propotioner, vatten) {
+            var propotioner = document.getElementById("propotioner").value;
+            var vatten = document.getElementById("vatten").value;
+            document.writeln("<img src=\"coffee-and-calculator.jpg\" />");
+            document.writeln("<h1>Bryggkalkylator</h1>");
+            document.writeln("<br/>");
+            document.write("Kaffe ");
+            document.write("<mark>");
+            document.write(vatten * propotioner / 1000);
+            document.write("</mark>");
+            document.write("g");
+        }
+    </script>
+</body>
+</html>
